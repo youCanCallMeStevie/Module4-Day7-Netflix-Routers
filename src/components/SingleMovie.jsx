@@ -17,7 +17,7 @@ class SingleMovie extends React.Component {
         <Button
           variant="danger"
           style={{ display: "none" }}
-          onClick={() => this.props.history.push("/details/" + this.props.movie.imdbID)}
+          onClick={() => this.props.history.push("/details/" + this.props.elementId)}
           >
           View Details
         </Button>

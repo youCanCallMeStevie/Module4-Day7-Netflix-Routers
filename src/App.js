@@ -15,10 +15,10 @@ class App extends React.Component {
       <>
         <Router>
           <NavBar title="Strive Netflix" />
-          <JumboCarousel />
-          <Route path="/" exact component={Home} />
-          <Route path="/details/:id" component={MovieDetails} />
-          <Footer />
+          <Route path="/" exact component={JumboCarousel} />
+          <Route path="/" exact render={(props) => <Home {...props} />} />
+          <Route path="/details/:id" exact component={MovieDetails} />
+          <Route path="/" component={Footer} />
         </Router>
       </>
     );
