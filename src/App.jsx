@@ -18,6 +18,11 @@ function App() {
         path="/details/:id"
         render={(props) => <MovieDetails {...props} />}
       />
+      <Route
+        path="/tvseries"
+        
+        render={(props) => <Home type='series' {...props} />}
+      />
       <Footer />
     </Router>
   );

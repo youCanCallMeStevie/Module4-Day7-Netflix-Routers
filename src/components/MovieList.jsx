@@ -3,7 +3,6 @@ import { Col, Container, Row, Spinner } from "react-bootstrap";
 import SingleMovie from "./SingleMovie";
 import ModalForm from "./ModalForm";
 
-
 class MovieList extends React.Component {
   state = {
     Movies: [],
@@ -29,14 +28,16 @@ class MovieList extends React.Component {
   };
 
   getMovies = async () => {
+    const url = this.props.type
+      ? "http://www.omdbapi.com/?apikey=1bee4676&s=" + this.props.query + "&type=" + this.props.type
+      : "http://www.omdbapi.com/?apikey=1bee4676&s=" + this.props.query; 
+      console.log('url', url) 
     try {
-      let response = await fetch(
-        "http://www.omdbapi.com/?i=tt3896198&apikey=1bee4676&s=" +
-          this.props.query
-      );
+      let response = await fetch(url);
       if (response.ok) {
         // console.log(response)
         let movies = await response.json();
+        console.log(movies)
         setTimeout(() => {
           this.setState({ Movies: movies.Search, loading: false }); //after the fetch is completed, and we have the info the info we are asking for, we are reverting the loading state
         }, 1000);

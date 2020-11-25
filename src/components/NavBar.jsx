@@ -20,12 +20,12 @@ class NavBar extends Component {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item mr-3 active">
               <a className="nav-link" href="#">
-                Home
+              <Link to='/'>Home</Link>
               </a>
             </li>
             <li className="nav-item mr-3">
               <a className="nav-link" href="#">
-                Series
+              <Link to='/tvseries'>TV Shows</Link>
               </a>
             </li>
             <li className="nav-item mr-3">

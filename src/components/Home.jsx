@@ -19,26 +19,30 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        
-          <Form inline style ={{paddingTop: "15px"}} >
-            <FormControl
-              type="text"
-              placeholder="Search Movies"
-              className="mr-sm-2"
-              onChange={e => {
-                this.HandleSearchQuery(e.target.value);
-              }}
-              style={{position: "relative", marginLeft: "40vw"}}
-            />
-            <Button variant="outline-primary">Search</Button>
-          </Form>
+        <Form inline style={{ paddingTop: "15px" }}>
+          <FormControl
+            type="text"
+            placeholder="Search Movies"
+            className="mr-sm-2"
+            onChange={e => {
+              this.HandleSearchQuery(e.target.value);
+            }}
+            style={{ position: "relative", marginLeft: "40vw" }}
+          />
+          <Button variant="outline-primary">Search</Button>
+        </Form>
         {this.state.isTyped ? (
           <MovieList query={this.state.keyWord} />
         ) : (
           <>
-            <MovieList query="batman" />
-            <MovieList query="superman" />
-            <MovieList query="hulk" />
+            <MovieList query="friends" type={this.props.type} />
+            {!this.props.type && (
+              <>
+                {" "}
+                <MovieList query="superman" />
+                <MovieList query="hulk" />
+              </>
+            )}
           </>
         )}
       </>
