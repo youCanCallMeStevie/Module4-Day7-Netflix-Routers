@@ -2,39 +2,9 @@ import React from "react";
 import { ListGroup, Badge } from "react-bootstrap";
 class CommentList extends React.Component {
   state = {
-    //comments: [],
     loading: true,
   };
 
-  // commentFetch = async () => {
-  //   try {
-  //     let response = await fetch(
-  //       "https://striveschool-api.herokuapp.com/api/comments/",
-
-  //       {
-  //         headers: new Headers({
-  //           Authorization:
-  //             "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmI2NWY4OTk4MzViMDAwMTc1ODRlZTIiLCJpYXQiOjE2MDU4NjU2MjQsImV4cCI6MTYwNzA3NTIyNH0.IdqIspL4rMxO-KBqvMMNspg3ITHwYcIBjTPhoBq4wEA",
-  //         }),
-  //       }
-  //     );
-  //     let comments = await response.json();
-  //     console.log("comments",comments);
-  //     this.setState({ comments }); //these results will now fill the empty state array
-  //   } catch (e) {
-  //     console.log("error: ", e);
-  //   }
-  // };
-
-  // componentDidMount = () => {
-  //   this.commentFetch();
-  // };
-
-  // componentDidUpdate = (prevProps) => {
-  //   if (prevProps.comments !== this.props.comments) {
-  //     this.setState({variant })
-  //   }
-  // };
 
   render() {
     return (

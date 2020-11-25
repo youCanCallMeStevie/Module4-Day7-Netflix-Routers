@@ -32,16 +32,6 @@ class Home extends React.Component {
             />
             <Button variant="outline-primary">Search</Button>
           </Form>
-
-        {/* <form className="searchBar" action="">
-            <input
-              type="search"
-              onChange={(e) => {
-                this.HandleSearchQuery(e.target.value);
-              }}
-            />
-            <i className="fa fa-search"></i>
-          </form> */}
         {this.state.isTyped ? (
           <MovieList query={this.state.keyWord} />
         ) : (

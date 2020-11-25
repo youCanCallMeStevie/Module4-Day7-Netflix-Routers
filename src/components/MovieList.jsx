@@ -1,6 +1,8 @@
 import React from "react";
 import { Col, Container, Row, Spinner } from "react-bootstrap";
 import SingleMovie from "./SingleMovie";
+import ModalForm from "./ModalForm";
+
 
 class MovieList extends React.Component {
   state = {
@@ -69,13 +71,13 @@ class MovieList extends React.Component {
     return (
       <>
         <Container>
-          {/* {this.state.selectedMovie && (
+          {this.state.selectedMovie && (
             <ModalForm
               show={this.state.displayModal}
               movie={this.state.selectedMovie}
               onHide={() => this.setState({ displayModal: false })}
             />
-          )} */}
+          )}
 
           <h1 className="mt-4 mb-3">{this.props.query.toUpperCase()}</h1>
           <Row>
@@ -90,7 +92,12 @@ class MovieList extends React.Component {
                 >
                   <SingleMovie
                     Movie={movie}
-                    onClick={() => this.props.history.push("/details/" + movie.imdbID)}
+                    onClicked={() =>
+                      this.setState({
+                        displayModal: true,
+                        selectedMovie: movie,
+                      })
+                    }
                   />
                 </Col>
               ))

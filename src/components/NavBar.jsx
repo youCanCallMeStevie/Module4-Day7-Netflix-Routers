@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link, withRouter } from "react-router-dom";
+
 import { Dropdown } from "react-bootstrap";
 
 import logo from "../netflix-logo.png";
@@ -8,9 +10,11 @@ class NavBar extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark">
-        <a className="navbar-brand my-1 mx-4" href="index.html">
-          <img src={logo} width="125" />
-        </a>
+        <a className='navbar-brand my-1 mx-4'>
+					<Link to='/'>
+						<img src={logo} alt='logo' width='125' />
+					</Link>
+				</a>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
@@ -89,4 +93,4 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default withRouter(NavBar);
