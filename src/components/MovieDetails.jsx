@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Spinner } from "react-bootstrap";
 
 export class MovieDetails extends Component {
   state = {
@@ -44,6 +44,16 @@ export class MovieDetails extends Component {
     let { currentMovie } = this.state;
     return (
       <Container className="my-3">
+{this.state.loading === true
+          ? 
+              <Col>
+                <Spinner animation="border" variant="light" />
+              </Col>
+            
+          : 
+
+
+
         <Row>
           <h1>{this.props.title}</h1>
           <Row>
@@ -92,6 +102,9 @@ export class MovieDetails extends Component {
             </Col>
           </Row>
         </Row>
+
+  }
+
       </Container>
     );
   }

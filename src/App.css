@@ -6,19 +6,6 @@ body {
   background-color: #141414;
   color: white;
 }
-/* .btn-secondary:not(:disabled):not(.disabled).active,
-.btn-secondary:not(:disabled):not(.disabled):active,
-.show > .btn-secondary.dropdown-toggle,
-.btn-secondary:not(:disabled):not(.disabled).active:focus,
-.btn-secondary:not(:disabled):not(.disabled):active:focus,
-.show > .btn-secondary.dropdown-toggle:focus,
-.btn-secondary:hover,
-.btn-secondary:not(:disabled):not(.disabled).active:focus,
-.btn-secondary:not(:disabled):not(.disabled):active:focus,
-.show > .btn-secondary.dropdown-toggle:focus {
-  background-color: transparent !important;
-  border-style: none;
-} */
 
 /* Nav Avatars */
 .avatar img {
@@ -40,24 +27,6 @@ body {
 }
 
 /*SEARCHBAR*/
-
-/*--- slide-out desktop google custom search (gcs) ---*/
-
-/* .searchBar {
-  position: relative;
-  bottom: -25px;
-  transform: translate(0, -50%);
-  margin-top: 15px;
-  margin-left: 40%;
-  transition: all 1s;
-  width: 50px;
-  height: 50px;
-  background: white;
-  box-sizing: border-box;
-  border-radius: 25px;
-  border: 4px solid white;
-  padding: 5px;
-} */
 
 input {
   position: absolute;
@@ -147,22 +116,66 @@ form:hover .fa {
   font-size: 10px;
 }
 
-/* .movieCard .overlay-icons:after {
-  display: inline-block;
-  content: "";
-  background-color: white;
-  border: 10px;
-  transform: scaleX(0);
-  transition: 300ms ease-in-out;
-  z-index: 1000;
-  position: absolute;
-  left: -10px;
-  bottom: -5px;
-  height: 150%;
-  width: 2.5px;
+body,
+nav {
+  margin: 0;
+  background-color: #221f1f;
 }
 
-.movieCard .overlay-icons:hover:after {
-  transform: scaleX(1);
-  z-index: 1000;
-} */
+h2,
+h4 {
+  color: #f5f5f1;
+}
+
+.icons {
+  font-size: 18px;
+  color: #f5f5f1;
+}
+
+.navbar-nav {
+  font-size: 0.9em;
+}
+
+#kids {
+  color: #f5f5f1;
+  font-size: 0.8em;
+}
+
+.footer-icon {
+  font-size: 1.3em;
+  margin-left: 1%;
+  margin-right: 1%;
+  color: #838383;
+}
+
+.footer-links {
+  text-align: left;
+  font-size: 0.8em;
+}
+
+.footer-links p {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.footer-links a {
+  color: #838383;
+}
+
+.footer-button {
+  color: #838383;
+  border-color: #838383;
+}
+
+.copyright {
+  color: #838383;
+  font-size: 0.6em;
+}
+
+.col img {
+  transition: transform 0.2s;
+}
+
+.col img:hover {
+  transform: scale(1.1);
+}

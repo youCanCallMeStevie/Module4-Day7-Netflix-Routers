@@ -19,7 +19,7 @@ export class Footer extends Component {
               <h6>Media Centre</h6>
               <h6>Privacy</h6>
               <h6>Contact Us</h6>
-              <Button> Service Code</Button>
+              <Button className= "footer-button" variant="secondary"> Service Code</Button>
               <p>1997-2020 Netflix, Inc.</p>
             </Col>
             <Col>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button, Col } from "react-bootstrap";
 
 class SingleMovie extends React.Component {
   state = {
@@ -8,12 +8,12 @@ class SingleMovie extends React.Component {
 
   render() {
     return (
-      <div className="col mb-5 mb-lg-0 pr-1 no-gutters mx-0">
+      <>
+      <Col className="mb-2">
         <span className="overlay-icons"><img src={this.props.Movie.Poster} alt="" className="img-fluid thumbnails" />
         <h4 className="text-light movieCard" style={{ display: "none" }}>
           {this.props.Movie.Title}
         </h4>
-
         <Button
           variant="danger"
           style={{ display: "none" }}
@@ -22,7 +22,9 @@ class SingleMovie extends React.Component {
           View Details
         </Button>
         </span>
-      </div>
+        </Col>
+
+      </>
     );
   }
 }
