@@ -35,16 +35,12 @@ class Home extends React.Component {
           <MovieList query={this.state.keyWord} />
         ) : (
           <>
-            <MovieList query="friends" type={this.props.type} />
-            {!this.props.type && (
-              <>
-                {" "}
-                <MovieList query="superman" />
-                <MovieList query="hulk" />
+            <MovieList query={this.props.type ? "friends" : 'batman'} type={this.props.type}/>
+                <MovieList query={this.props.type ? "hundred" : 'superman'} type={this.props.type}/>
+                <MovieList query={this.props.type ? "simpsons" : 'spiderman'} type={this.props.type} />
               </>
-            )}
-          </>
-        )}
+            )
+        }
       </>
     );
   }

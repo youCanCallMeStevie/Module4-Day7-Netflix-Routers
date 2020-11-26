@@ -10,22 +10,22 @@ class NavBar extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark">
-        <a className='navbar-brand my-1 mx-4'>
-					<Link to='/'>
-						<img src={logo} alt='logo' width='125' />
-					</Link>
-				</a>
+        <a className="navbar-brand my-1 mx-4">
+          <Link to="/">
+            <img src={logo} alt="logo" width="125" />
+          </Link>
+        </a>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item mr-3 active">
               <a className="nav-link" href="#">
-              <Link to='/'>Home</Link>
+                <Link to="/">Home</Link>
               </a>
             </li>
             <li className="nav-item mr-3">
               <a className="nav-link" href="#">
-              <Link to='/tvseries'>TV Shows</Link>
+                <Link to="/tvseries">TV Shows</Link>
               </a>
             </li>
             <li className="nav-item mr-3">
@@ -82,7 +82,11 @@ class NavBar extends Component {
               </Dropdown.Item>
               <div className="dropdown-divider"></div>
               <Dropdown.Item href="#/action-5">Manage Profiles</Dropdown.Item>
-              <Dropdown.Item href="#/action-6">Accounts</Dropdown.Item>
+
+              <Dropdown.Item><Link to="/registration">
+                Register
+              </Link></Dropdown.Item>
+
               <Dropdown.Item href="#/action-7">Back Office</Dropdown.Item>
               <Dropdown.Item href="#/action-8">Sign out</Dropdown.Item>
             </Dropdown.Menu>

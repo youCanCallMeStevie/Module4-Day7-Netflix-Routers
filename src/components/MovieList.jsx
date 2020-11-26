@@ -103,9 +103,12 @@ class MovieList extends React.Component {
                 </Col>
               ))
             ) : (
-              <Spinner animation="border" role="status">
-                <span className="sr-only">Loading...</span>
-              </Spinner>
+              <div className="d-block w-100 mb-5 mt-5">
+              <h5 className="d-inline-block mb-0 mr-2" style={{ color: "white" }}>
+                Loading...
+              </h5>
+              <Spinner animation="border" variant="danger" disabled />
+            </div>
             )}
           </Row>
         </Container>
