@@ -71,7 +71,7 @@ class MovieList extends React.Component {
   render() {
     return (
       <>
-        <Container>
+        <Container className="imagesContainer">
           {this.state.selectedMovie && (
             <ModalForm
               show={this.state.displayModal}

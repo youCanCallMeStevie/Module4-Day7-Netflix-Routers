@@ -44,13 +44,15 @@ export class MovieDetails extends Component {
     let { currentMovie } = this.state;
     return (
       <Container className="my-3">
-{this.state.loading === true
-          ? 
-              <Col>
-                <Spinner animation="border" variant="light" />
-              </Col>
+{this.state.loading ? (
+          <div className="d-block w-100 mb-5 mt-5">
+            <h5 className="d-inline-block mb-0 mr-2" style={{ color: "white" }}>
+              Loading...
+            </h5>
+            <Spinner animation="border" variant="danger" disabled />
+          </div>)
             
-          : 
+          : (
 
 
 
@@ -102,7 +104,7 @@ export class MovieDetails extends Component {
             </Col>
           </Row>
         </Row>
-
+          )
   }
 
       </Container>
